@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import { showMessage } from '../src/cli.js';
+import { greetPlayer } from '../src/index.js';
 
-showMessage('Welcome to the Brain Games!');
+greetPlayer();

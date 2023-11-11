@@ -2,15 +2,21 @@ import { askQuestion, showMessage } from './cli.js';
 
 const MAX_ROUNDS_COUNT = 3;
 
-const playGame = ({
-  gameDescription,
-  playRound,
-}) => {
+const greetPlayer = () => {
   showMessage('Welcome to the Brain Games!');
 
   const name = askQuestion('May I have your name? ');
 
   showMessage(`Hello, ${name} !`);
+
+  return name;
+};
+
+const playGame = ({
+  gameDescription,
+  playRound,
+}) => {
+  const name = greetPlayer();
 
   showMessage(gameDescription);
 
@@ -23,7 +29,7 @@ const playGame = ({
 
     const answer = askQuestion('Your answer: ');
 
-    if (answer === correctAnswer) {
+    if (answer.toLowerCase() === correctAnswer.toLowerCase()) {
       showMessage('Correct!');
       roundIndex++;
     } else {
@@ -38,4 +44,5 @@ const playGame = ({
 
 export {
   playGame,
+  greetPlayer,
 };

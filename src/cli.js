@@ -7,7 +7,7 @@ const showMessage = (message) => {
 const askQuestion = (question) => {
   const answer = readlineSync.question(question);
 
-  return answer.toLowerCase();
+  return answer;
 };
 
 export {
