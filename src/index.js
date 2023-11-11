@@ -31,7 +31,7 @@ const playGame = ({
 
     if (answer.toLowerCase() === correctAnswer.toLowerCase()) {
       showMessage('Correct!');
-      roundIndex++;
+      roundIndex += 1;
     } else {
       showMessage(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       showMessage(`Let's try again, ${name}!`);

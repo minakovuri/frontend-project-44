@@ -6,7 +6,7 @@ const GAME_DESCRIPTION = 'What is the result of the expression?';
 function playRound() {
   const firstNumber = generateRandomInt(1, 20);
   const secondNumber = generateRandomInt(1, 20);
-  const operation = getRandomItem('+', '-', '*');
+  const operation = getRandomItem(['+', '-', '*']);
 
   const question = `${firstNumber} ${operation} ${secondNumber}`;
 

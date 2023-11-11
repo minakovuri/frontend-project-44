@@ -10,7 +10,7 @@ function createArythmeticProgression() {
 
   const progression = Array.from({ length }, (_, i) => a1 + (i + 1) * d);
 
-  const missingElementIndex = generateRandomInt(0, length - 1);
+  const missingElementIndex = generateRandomInt(1, length - 1);
 
   const missingElement = `${progression[missingElementIndex]}`;
   const elementsBeforeMissing = progression.slice(0, missingElementIndex);
