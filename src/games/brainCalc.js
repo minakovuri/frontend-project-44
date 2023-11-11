@@ -3,10 +3,15 @@ import { generateRandomInt, getRandomItem, evaluateExpression } from '../utils.j
 
 const GAME_DESCRIPTION = 'What is the result of the expression?';
 
+const MIN_NUMBER = 1;
+const MAX_NUMBER = 20;
+
+const OPERATIONS = ['+', '-', '*'];
+
 function playRound() {
-  const firstNumber = generateRandomInt(1, 20);
-  const secondNumber = generateRandomInt(1, 20);
-  const operation = getRandomItem(['+', '-', '*']);
+  const firstNumber = generateRandomInt(MIN_NUMBER, MAX_NUMBER);
+  const secondNumber = generateRandomInt(MIN_NUMBER, MAX_NUMBER);
+  const operation = getRandomItem(OPERATIONS);
 
   const question = `${firstNumber} ${operation} ${secondNumber}`;
 

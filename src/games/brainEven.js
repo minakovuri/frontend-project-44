@@ -3,14 +3,21 @@ import { generateRandomInt, castBooleanToYesNoString } from '../utils.js';
 
 const GAME_DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-function playRound() {
-  const number = generateRandomInt(0, 100);
+const MIN_NUMBER = 1;
+const MAX_NUMBER = 100;
 
-  const isEven = number % 2 === 0;
+function isEven(number) {
+  return number % 2 === 0;
+}
+
+function playRound() {
+  const number = generateRandomInt(MIN_NUMBER, MAX_NUMBER);
+
+  const even = isEven(number);
 
   return {
     question: number,
-    correctAnswer: castBooleanToYesNoString(isEven),
+    correctAnswer: castBooleanToYesNoString(even),
   };
 }
 

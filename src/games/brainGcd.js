@@ -3,6 +3,9 @@ import { generateRandomInt } from '../utils.js';
 
 const GAME_DESCRIPTION = 'Find the greatest common divisor of given numbers.';
 
+const MIN_NUMBER = 1;
+const MAX_NUMBER = 100;
+
 function getGcd(firstNumber, secondNumber) {
   if (!secondNumber) {
     return firstNumber;
@@ -12,8 +15,8 @@ function getGcd(firstNumber, secondNumber) {
 }
 
 function playRound() {
-  const firstNumber = generateRandomInt(1, 100);
-  const secondNumber = generateRandomInt(1, 100);
+  const firstNumber = generateRandomInt(MIN_NUMBER, MAX_NUMBER);
+  const secondNumber = generateRandomInt(MIN_NUMBER, MAX_NUMBER);
 
   const question = `${firstNumber} ${secondNumber}`;
 
