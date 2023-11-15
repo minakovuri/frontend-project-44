@@ -26,6 +26,4 @@ const runBrainEven = () => playGame({
   playRound,
 });
 
-export {
-  runBrainEven,
-};
+export default runBrainEven;

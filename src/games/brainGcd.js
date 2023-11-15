@@ -33,6 +33,4 @@ const runBrainGcd = () => playGame({
   playRound,
 });
 
-export {
-  runBrainGcd,
-};
+export default runBrainGcd;

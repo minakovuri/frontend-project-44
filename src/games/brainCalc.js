@@ -28,6 +28,4 @@ const runBrainCalc = () => playGame({
   playRound,
 });
 
-export {
-  runBrainCalc,
-};
+export default runBrainCalc;

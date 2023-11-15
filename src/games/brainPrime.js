@@ -30,6 +30,4 @@ const runBrainPrime = () => playGame({
   playRound,
 });
 
-export {
-  runBrainPrime,
-};
+export default runBrainPrime;

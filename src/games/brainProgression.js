@@ -51,6 +51,4 @@ const runBrainProgression = () => playGame({
   playRound,
 });
 
-export {
-  runBrainProgression,
-};
+export default runBrainProgression;
