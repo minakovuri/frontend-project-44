@@ -46,9 +46,11 @@ function playRound() {
   };
 }
 
-const brainProgression = () => playGame({
+const runBrainProgression = () => playGame({
   gameDescription: GAME_DESCRIPTION,
   playRound,
 });
 
-export default brainProgression;
+export {
+  runBrainProgression,
+};

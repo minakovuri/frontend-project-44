@@ -23,9 +23,11 @@ function playRound() {
   };
 }
 
-const brainCalc = () => playGame({
+const runBrainCalc = () => playGame({
   gameDescription: GAME_DESCRIPTION,
   playRound,
 });
 
-export default brainCalc;
+export {
+  runBrainCalc,
+};
